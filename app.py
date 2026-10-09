@@ -79,7 +79,7 @@ def index():
     items = "".join(f"<li><b>{n}</b>: {m} <small>{t}</small></li>" for n, m, t in rows) or "<li><i>아직 글이 없습니다</i></li>"
     return f"""<!doctype html><meta charset=utf-8><title>CloudMorph Guestbook</title>
 <style>body{{font-family:system-ui;max-width:640px;margin:40px auto;padding:0 16px}}small{{color:#888}}input,button{{padding:8px}}</style>
-<h1>방명록 (v6: 연속 push 잠금 테스트)</h1><p>storage: <code>{storage_label()}</code> · arch: {platform.machine()} · host: {platform.node()}</p>
+<h1>방명록 (v7: 연속 push 잠금 테스트)</h1><p>storage: <code>{storage_label()}</code> · arch: {platform.machine()} · host: {platform.node()}</p>
 <form method=post action=/entries><input name=name placeholder=이름 size=10> <input name=message placeholder=메시지 size=40 required> <button>남기기</button></form>
 <ul>{items}</ul>"""
 
